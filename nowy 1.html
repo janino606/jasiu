@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smakowita Kuchnia - Przepisy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf3;
+            color: #38251d;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #9f3826;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #ffe5cb;
+        }
+
+        nav {
+            background: #702719;
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 14px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #ffd28c;
+        }
+
+        .hero {
+            background: linear-gradient(
+                rgba(40, 20, 10, 0.55),
+                rgba(40, 20, 10, 0.55)
+            ),
+            url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e8a348;
+            color: #38251d;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #ffca78;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 45px 20px 10px;
+        }
+
+        .intro h2 {
+            color: #9f3826;
+            font-size: 30px;
+        }
+
+        .recipes {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px 60px;
+        }
+
+        .recipe {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 20px #00000012;
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+
+        .recipe img {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 28px;
+        }
+
+        .recipe h2 {
+            color: #9f3826;
+            margin-bottom: 10px;
+        }
+
+        .recipe h3 {
+            margin-top: 18px;
+            color: #704126;
+        }
+
+        .recipe ul,
+        .recipe ol {
+            padding-left: 22px;
+        }
+
+        .time {
+            display: inline-block;
+            background: #fff0d9;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #702719;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        @media (max-width: 750px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .recipe {
+                grid-template-columns: 1fr;
+            }
+
+            .recipe img {
+                height: 240px;
+                min-height: 0;
+            }
+
+            .recipe-content {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍓 Smakowita Kuchnia</h1>
+    <p>Proste przepisy, wyjątkowy smak!</p>
+</header>
+
+<nav>
+    <a href="#pizza">Pizza</a>
+    <a href="#tosty">Tosty francuskie</a>
+    <a href="#rogaliki">Rogaliki</a>
+    <a href="#paczk i">Pączki</a>
+</nav>
+
+<section class="hero">
+    <h2>Odkryj smak domowych wypieków!</h2>
+    <p>Znajdź swój ulubiony przepis i przygotuj coś pysznego.</p>
+    <a class="button" href="#przepisy">Zobacz przepisy ↓</a>
+</section>
+
+<section class="intro" id="przepisy">
+    <h2>Nasze przepisy</h2>
+    <p>Wybierz coś dla siebie i gotuj razem z nami!</p>
+</section>
+
+<main class="recipes">
+
+    <!-- PIZZA -->
+    <article class="recipe" id="pizza">
+        <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+            alt="Domowa pizza z serem i pomidorami">
+
+        <div class="recipe-content">
+            <h2>🍕 Domowa pizza</h2>
+            <span class="time">⏱ Czas: około 1 godziny</span>
+            <span class="time">🍽 Porcje: 2-3</span>
+
+            <h3>Składniki na ciasto:</h3>
+            <ul>
+                <li>300 g mąki pszennej</li>
+                <li>180 ml ciepłej wody</li>
+                <li>7 g suchych drożdży</li>
+                <li>1 łyżka oliwy</li>
+                <li>1/2 łyżeczki soli</li>
+                <li>1/2 łyżeczki cukru</li>
+            </ul>
+
+            <h3>Dodatki:</h3>
+            <ul>
+                <li>150 g sera mozzarella</li>
+                <li>150 ml sosu pomidorowego</li>
+                <li>Szynka, pieczarki lub inne ulubione dodatki</li>
+                <li>Oregano do smaku</li>
+            </ul>
+
+            <h3>Przygotowanie:</h3>
+            <ol>
+                <li>Wymieszaj wodę, drożdże i cukier.</li>
+                <li>Dodaj mąkę, sól oraz oliwę. Wyrabiaj ciasto przez około 8 minut.</li>
+                <li>Przykryj i pozostaw na 45 minut do wyrośnięcia.</li>
+                <li>Rozwałkuj ciasto, posmaruj sosem i dodaj ser oraz ulubione składniki.</li>
+                <li>Piecz w temperaturze 230°C przez około 12-15 minut.</li>
+            </ol>
+        </div>
+    </article>
+
+    <!-- TOSTY FRANCUSKIE -->
+    <article class="recipe" id="tosty">
+        <img
+            src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=85"
+            alt="Słodkie śniadanie z pieczywem i owocami">
+
+        <div class="recipe-content">
+            <h2>🍞 Słodkie tosty francuskie</h2>
+            <span class="time">⏱ Czas: 15 minut</span>
+            <span class="time">🍽 Porcje: 2</span>
+
+            <h3>Składniki:</h3>
+            <ul>
+                <li>4 kromki chleba tostowego</li>
+                <li>2 jajka</li>
+                <li>100 ml mleka</li>
+                <li>1 łyżeczka cukru waniliowego</li>
+                <li>Szczypta cynamonu</li>
+                <li>Masło do smażenia</li>
+                <li>Cukier puder i owoce do podania</li>
+            </ul>
+
+            <h3>Przygotowanie:</h3>
+            <ol>
+                <li>W misce roztrzep jajka z mlekiem, cukrem waniliowym i cynamonem.</li>
+                <li>Zanurz kromki chleba w przygotowanej mieszance z obu stron.</li>
+                <li>Rozgrzej masło na patelni.</li>
+                <li>Smaż tosty przez 2-3 minuty z każdej strony, aż będą złociste.</li>
+                <li>Podawaj z owocami, cukrem pudrem lub syropem klonowym.</li>
+            </ol>
+        </div>
+    </article>
+
+    <!-- ROGALIKI -->
+    <article class="recipe" id="rogaliki">
+        <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85"
+            alt="Złociste rogaliki z ciasta">
+
+        <div class="recipe-content">
+            <h2>🥐 Rogaliki z dżemem truskawkowym</h2>
+            <span class="time">⏱ Czas: około 40 minut</span>
+            <span class="time">🍽 Porcje: 12 rogalików</span>
+
+            <h3>Składniki:</h3>
+            <ul>
+                <li>1 opakowanie ciasta francuskiego (około 275 g)</li>
+                <li>150 g gęstego dżemu truskawkowego</li>
+                <li>1 jajko do posmarowania</li>
+                <li>Cukier puder do dekoracji</li>
+            </ul>
+
+            <h3>Przygotowanie:</h3>
+            <ol>
+                <li>Rozgrzej piekarnik do 200°C.</li>
+                <li>Rozwiń ciasto francuskie i pokrój je na 12 trójkątów.</li>
+                <li>Na szerszym końcu każdego trójkąta umieść niewielką porcję dżemu.</li>
+                <li>Zwiń trójkąty w rogaliki i delikatnie zlep końce.</li>
+                <li>Ułóż na blasze wyłożonej papierem do pieczenia.</li>
+                <li>Posmaruj roztrzepanym jajkiem i piecz 15-20 minut, aż się zarumienią.</li>
+                <li>Po ostudzeniu posyp cukrem pudrem.</li>
+            </ol>
+
+            <p><strong>Wskazówka:</strong> Nie dodawaj zbyt dużo dżemu,
+            ponieważ może wypłynąć podczas pieczenia.</p>
+        </div>
+    </article>
+
+    <!-- PACZKI -->
+    <article class="recipe" id="paczk i">
+        <img
+            src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+            alt="Słodkie pączki z polewą">
+
+        <div class="recipe-content">
+            <h2>🍩 Pączki z nadzieniem czekoladowym</h2>
+            <span class="time">⏱ Czas: około 2 godziny</span>
+            <span class="time">🍽 Porcje: 10-12 pączków</span>
+
+            <h3>Składniki:</h3>
+            <ul>
+                <li>500 g mąki pszennej</li>
+                <li>250 ml ciepłego mleka</li>
+                <li>25 g świeżych drożdży</li>
+                <li>2 jajka i 1 żółtko</li>
+                <li>70 g cukru</li>
+                <li>60 g roztopionego masła</li>
+                <li>1 łyżeczka cukru waniliowego</li>
+                <li>200 g kremu czekoladowego</li>
+                <li>Olej do smażenia</li>
+                <li>Cukier puder do posypania</li>
+            </ul>
+
+            <h3>Przygotowanie:</h3>
+            <ol>
+                <li>Rozkrusz drożdże do ciepłego mleka, dodaj łyżkę cukru i odstaw na 10 minut.</li>
+                <li>Dodaj mąkę, jajka, żółtko, pozostały cukier i cukier waniliowy.</li>
+                <li>Wyrabiaj ciasto, a następnie dodaj masło i ponownie wyrabiaj.</li>
+                <li>Przykryj ciasto i pozostaw w ciepłym miejscu na około godzinę.</li>
+                <li>Uformuj 10-12 kulek i pozostaw na kolejne 20-30 minut.</li>
+                <li>Smaż partiami w oleju o temperaturze około 170°C,
+                aż będą złociste. Zachowaj ostrożność podczas smażenia.</li>
+                <li>Po ostudzeniu nadziej pączki kremem czekoladowym
+                za pomocą rękawa cukierniczego.</li>
+                <li>Posyp cukrem pudrem i podawaj.</li>
+            </ol>
+        </div>
+    </article>
+
+</main>
+
+<footer>
+    <h3>🍓 Smakowita Kuchnia</h3>
+    <p>Gotuj z pasją, jedz z uśmiechem!</p>
+    <p>© 2026 Smakowita Kuchnia</p>
+</footer>
+
+</body>
+</html>
